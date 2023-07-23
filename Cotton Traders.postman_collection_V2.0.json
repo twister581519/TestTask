@@ -1,0 +1,3720 @@
+{
+	"info": {
+		"_postman_id": "3789edd6-0e2d-47ca-9fb8-ed1b9a42f3b9",
+		"name": "Cotton Traders",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26912414"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"item": [
+				{
+					"name": "Registering with only the required fields",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"\r",
+									"if (pm.response.code == 200) \r",
+									"{var requestBody = JSON.parse(request.data);\r",
+									"pm.environment.set(\"RegisterLogin\", requestBody.credentials.username)\r",
+									"var requestBody = JSON.parse(request.data);\r",
+									"pm.environment.set(\"RegisterPassword\", requestBody.credentials.password)\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"isPromotion\":true,\r\n\"allowDataSharing\":true,\r\n\"profile\":{\r\n\"allowDataSharing\":true,\r\n\"firstName\":\"Daniel \",\r\n\"title\":\"Mr\",\r\n\"email\":\"{{email}}\",\r\n\"isPromotion\":true,\r\n\"encryptedPassword\":\"Steven1\",\r\n\"lastName\":\"Lurye\"\r\n},\r\n\"credentials\":\r\n{\"username\":\"{{email}}\",\r\n\"password\":\"Steven1\"}}"
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/register/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "Registering with all fields",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"\r",
+									"if (pm.response.code == 200) \r",
+									"{var requestBody = JSON.parse(request.data);\r",
+									"pm.environment.set(\"RegisterLogin\", requestBody.credentials.username)\r",
+									"var requestBody = JSON.parse(request.data);\r",
+									"pm.environment.set(\"RegisterPassword\", requestBody.credentials.password)\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"isPromotion\": false,\r\n\t\"allowDataSharing\": false,\r\n\t\"profile\": {\r\n\t\t\"phone\": \"0787545466\",\r\n\t\t\"allowDataSharing\": false,\r\n\t\t\"firstName\": \"Daniel\",\r\n\t\t\"title\": \"Miss\",\r\n\t\t\"birthday\": \"28 February 2017\",\r\n\t\t\"email\": \"{{email}}\",\r\n\t\t\"isPromotion\": false,\r\n\t\t\"encryptedPassword\": \"Steven1\",\r\n\t\t\"lastName\": \"Danie\"\r\n\t},\r\n\t\"credentials\": {\r\n\t\t\"username\": \"{{email}}\",\r\n\t\t\"password\": \"Steven1\"\r\n\t}\r\n}"
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/register/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) Without the \"profile\" object",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 500\", function(){\r",
+									"    pm.response.to.have.status(500);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"isPromotion\":true,\r\n\"allowDataSharing\":true,\r\n\"credentials\":\r\n{\"username\":\"{{email}}\",\r\n\"password\":\"Steven1\"}}"
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/register/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) Without the \"credentials\" object",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 500\", function(){\r",
+									"    pm.response.to.have.status(500);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"isPromotion\":true,\r\n\"allowDataSharing\":true,\r\n\"profile\":{\r\n\"allowDataSharing\":true,\r\n\"firstName\":\"Daniel \",\r\n\"title\":\"Mr\",\r\n\"email\":\"{{email}}\",\r\n\"isPromotion\":true,\r\n\"encryptedPassword\":\"Steven1\",\r\n\"lastName\":\"Lurye\"\r\n}}"
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/register/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) Without a required field (first name)",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 400\", function(){\r",
+									"    pm.response.to.have.status(400);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"isPromotion\":true,\r\n\"allowDataSharing\":true,\r\n\"profile\":{\r\n\"allowDataSharing\":true,\r\n\"title\":\"Mr\",\r\n\"email\":\"{{email}}\",\r\n\"isPromotion\":true,\r\n\"encryptedPassword\":\"Steven1\",\r\n\"lastName\":\"Lurye\"\r\n},\r\n\"credentials\":\r\n{\"username\":\"{{email}}\",\r\n\"password\":\"Steven1\"}}"
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/register/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) Without a required field (last name)",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 400\", function(){\r",
+									"    pm.response.to.have.status(400);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"isPromotion\":true,\r\n\"allowDataSharing\":true,\r\n\"profile\":{\r\n\"allowDataSharing\":true,\r\n\"firstName\":\"Daniel \",\r\n\"title\":\"Mr\",\r\n\"email\":\"{{email}}\",\r\n\"isPromotion\":true,\r\n\"encryptedPassword\":\"Steven1\"\r\n},\r\n\"credentials\":\r\n{\"username\":\"{{email}}\",\r\n\"password\":\"Steven1\"}}"
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/register/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) Without a required field (title)",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 400\", function(){\r",
+									"    pm.response.to.have.status(400);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"isPromotion\":true,\r\n\"allowDataSharing\":true,\r\n\"profile\":{\r\n\"allowDataSharing\":true,\r\n\"firstName\":\"Daniel \",\r\n\"email\":\"{{email}}\",\r\n\"isPromotion\":true,\r\n\"encryptedPassword\":\"Steven1\",\r\n\"lastName\":\"Lurye\"\r\n},\r\n\"credentials\":\r\n{\"username\":\"{{email}}\",\r\n\"password\":\"Steven1\"}}"
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/register/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) empty email field",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 400\", function(){\r",
+									"    pm.response.to.have.status(400);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isPromotion\":true,\r\n\"allowDataSharing\":true,\r\n\"profile\":{\r\n\"allowDataSharing\":true,\r\n\"firstName\":\"Daniel \",\r\n\"title\":\"Mr\",\r\n\"email\":\"\",\r\n\"isPromotion\":true,\r\n\"encryptedPassword\":\"Steven1\",\r\n\"lastName\":\"Lurye\"\r\n},\r\n\"credentials\":\r\n{\"username\":\"\",\r\n\"password\":\"Steven1\"}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/register/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) with no email field",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 400\", function(){\r",
+									"    pm.response.to.have.status(400);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"isPromotion\":true,\r\n\"allowDataSharing\":true,\r\n\"profile\":{\r\n\"allowDataSharing\":true,\r\n\"firstName\":\"Daniel \",\r\n\"title\":\"Mr\",\r\n\"isPromotion\":true,\r\n\"encryptedPassword\":\"Steven1\",\r\n\"lastName\":\"Lurye\"\r\n},\r\n\"credentials\":\r\n{\"username\":\"{{email}}\",\r\n\"password\":\"Steven1\"}}"
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/register/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) different emails in the email and username fields",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 400\", function(){\r",
+									"    pm.response.to.have.status(400);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"isPromotion\": true,\r\n\t\"allowDataSharing\": true,\r\n\t\"profile\": {\r\n\t\t\"allowDataSharing\": true,\r\n\t\t\"firstName\": \"Daniel\",\r\n\t\t\"title\": \"Mr\",\r\n\t\t\"email\": \"{{email}}\",\r\n\t\t\"isPromotion\": true,\r\n\t\t\"encryptedPassword\": \"Steven1\",\r\n\t\t\"lastName\": \"Lurye\"\r\n\t},\r\n\t\"credentials\": {\r\n\t\t\"username\": \"magnifico123123@gmail.com\",\r\n\t\t\"password\": \"Steven1\"\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/register/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) existing email",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"isPromotion\": true,\r\n\t\"allowDataSharing\": true,\r\n\t\"profile\": {\r\n\t\t\"allowDataSharing\": true,\r\n\t\t\"firstName\": \"Daniel\",\r\n\t\t\"title\": \"Mr\",\r\n\t\t\"email\": \"magnifico581519@gmail.com\",\r\n\t\t\"isPromotion\": true,\r\n\t\t\"encryptedPassword\": \"Steven1\",\r\n\t\t\"lastName\": \"Lurye\"\r\n\t},\r\n\t\"credentials\": {\r\n\t\t\"username\": \"magnifico581519@gmail.com\",\r\n\t\t\"password\": \"Steven1\"\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/register/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) the wrong email format (2@)",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 400\", function(){\r",
+									"    pm.response.to.have.status(400);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"isPromotion\": true,\r\n\t\"allowDataSharing\": true,\r\n\t\"profile\": {\r\n\t\t\"allowDataSharing\": true,\r\n\t\t\"firstName\": \"Daniel\",\r\n\t\t\"title\": \"Mr\",\r\n\t\t\"email\": \"magnifico581519+3@@gmail.com\",\r\n\t\t\"isPromotion\": true,\r\n\t\t\"encryptedPassword\": \"Steven1\",\r\n\t\t\"lastName\": \"Lurye\"\r\n\t},\r\n\t\"credentials\": {\r\n\t\t\"username\": \"magnifico581519+3@@gmail.com\",\r\n\t\t\"password\": \"Steven1\"\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/register/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-)  the wrong email format (without . in the domain name)",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 400\", function(){\r",
+									"    pm.response.to.have.status(400);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"isPromotion\": true,\r\n\t\"allowDataSharing\": true,\r\n\t\"profile\": {\r\n\t\t\"allowDataSharing\": true,\r\n\t\t\"firstName\": \"Daniel\",\r\n\t\t\"title\": \"Mr\",\r\n\t\t\"email\": \"magnifico581519+3@gmailcom\",\r\n\t\t\"isPromotion\": true,\r\n\t\t\"encryptedPassword\": \"Steven1\",\r\n\t\t\"lastName\": \"Lurye\"\r\n\t},\r\n\t\"credentials\": {\r\n\t\t\"username\": \"magnifico581519+3@gmailcom\",\r\n\t\t\"password\": \"Steven1\"\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/register/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) the wrong email format (without @)",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 400\", function(){\r",
+									"    pm.response.to.have.status(400);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"isPromotion\": true,\r\n\t\"allowDataSharing\": true,\r\n\t\"profile\": {\r\n\t\t\"allowDataSharing\": true,\r\n\t\t\"firstName\": \"Daniel\",\r\n\t\t\"title\": \"Mr\",\r\n\t\t\"email\": \"magnifico581519+3gmail.com\",\r\n\t\t\"isPromotion\": true,\r\n\t\t\"encryptedPassword\": \"Steven1\",\r\n\t\t\"lastName\": \"Lurye\"\r\n\t},\r\n\t\"credentials\": {\r\n\t\t\"username\": \"magnifico581519+3gmail.com\",\r\n\t\t\"password\": \"Steven1\"\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/register/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) the wrong email format (1 symbol after . in the domain name)",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 400\", function(){\r",
+									"    pm.response.to.have.status(400);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"isPromotion\": true,\r\n\t\"allowDataSharing\": true,\r\n\t\"profile\": {\r\n\t\t\"allowDataSharing\": true,\r\n\t\t\"firstName\": \"Daniel\",\r\n\t\t\"title\": \"Mr\",\r\n\t\t\"email\": \"magnifico581519+3@gmail.c\",\r\n\t\t\"isPromotion\": true,\r\n\t\t\"encryptedPassword\": \"Steven1\",\r\n\t\t\"lastName\": \"Lurye\"\r\n\t},\r\n\t\"credentials\": {\r\n\t\t\"username\": \"magnifico581519+3@gmail.c\",\r\n\t\t\"password\": \"Steven1\"\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/register/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) empty password field",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 400\", function(){\r",
+									"    pm.response.to.have.status(400);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"isPromotion\": true,\r\n\t\"allowDataSharing\": true,\r\n\t\"profile\": {\r\n\t\t\"allowDataSharing\": true,\r\n\t\t\"firstName\": \"Daniel\",\r\n\t\t\"title\": \"Mr\",\r\n\t\t\"email\": \"magnifico581519+3@gmail.com\",\r\n\t\t\"isPromotion\": true,\r\n\t\t\"encryptedPassword\": \"Steven1\",\r\n\t\t\"lastName\": \"Lurye\"\r\n\t},\r\n\t\"credentials\": {\r\n\t\t\"username\": \"magnifico581519+3@gmail.com\",\r\n\t\t\"password\": \"\"\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/register/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) no password field",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 400\", function(){\r",
+									"    pm.response.to.have.status(400);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"isPromotion\": true,\r\n\t\"allowDataSharing\": true,\r\n\t\"profile\": {\r\n\t\t\"allowDataSharing\": true,\r\n\t\t\"firstName\": \"Daniel\",\r\n\t\t\"title\": \"Mr\",\r\n\t\t\"email\": \"magnifico581519+3@gmail.com\",\r\n\t\t\"isPromotion\": true,\r\n\t\t\"encryptedPassword\": \"Steven1\",\r\n\t\t\"lastName\": \"Lurye\"\r\n\t},\r\n\t\"credentials\": {\r\n\t\t\"username\": \"magnifico581519+3@gmail.com\"\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/register/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) the wrong password format (less than 5 characters)",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 400\", function(){\r",
+									"    pm.response.to.have.status(400);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"isPromotion\": true,\r\n\t\"allowDataSharing\": true,\r\n\t\"profile\": {\r\n\t\t\"allowDataSharing\": true,\r\n\t\t\"firstName\": \"Daniel\",\r\n\t\t\"title\": \"Doctor\",\r\n\t\t\"email\": \"{{email}}\",\r\n\t\t\"isPromotion\": true,\r\n\t\t\"encryptedPassword\": \"Steven1\",\r\n\t\t\"lastName\": \"Lurye\"\r\n\t},\r\n\t\"credentials\": {\r\n\t\t\"username\": \"{{email}}\",\r\n\t\t\"password\": \"123\"\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/register/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) title that differs from the ones suggested on the frontend",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 400\", function(){\r",
+									"    pm.response.to.have.status(400);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"isPromotion\": true,\r\n\t\"allowDataSharing\": true,\r\n\t\"profile\": {\r\n\t\t\"allowDataSharing\": true,\r\n\t\t\"firstName\": \"Daniel\",\r\n\t\t\"title\": \"Differentitle\",\r\n\t\t\"email\": \"{{email}}\",\r\n\t\t\"isPromotion\": true,\r\n\t\t\"encryptedPassword\": \"Steven1\",\r\n\t\t\"lastName\": \"Lurye\"\r\n\t},\r\n\t\"credentials\": {\r\n\t\t\"username\": \"{{email}}\",\r\n\t\t\"password\": \"aaaaa\"\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/register/197/poq_user_id"
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"let email = 'magnifico581519' + '+' + Date.now() + '@gmail.com'",
+							"pm.environment.set('email', email);",
+							"",
+							"// Pre-request Script",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Response must have a body, in JSON\", function(){",
+							"  pm.response.to.be.withBody;",
+							"  pm.response.to.be.json;",
+							"})",
+							"pm.test(\"The response time should be below 2s\",function(){",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000)",
+							"})",
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Log in",
+			"item": [
+				{
+					"name": "Successful log in",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody)\r",
+									"pm.environment.set(\"authorization_username\", jsonData.username);\r",
+									"var jsonData = JSON.parse(responseBody)\r",
+									"pm.environment.set(\"authorization_password\", jsonData.encryptedPassword)\r",
+									"\r",
+									"pm.test(\"Status code 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"})\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"isMasterCard\": true,\r\n\t\"username\": \"{{RegisterLogin}}\",\r\n\t\"password\": \"{{RegisterPassword}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/login/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) empty request body",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 403\", function(){\r",
+									"    pm.response.to.have.status(403);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/login/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) empty username field",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 403\", function(){\r",
+									"    pm.response.to.have.status(403);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"isMasterCard\": true,\r\n\t\"username\": \"\",\r\n\t\"password\": \"Steven1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/login/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) no username field",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 403\", function(){\r",
+									"    pm.response.to.have.status(403);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"isMasterCard\": true,\r\n\t\"password\": \"Steven1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/login/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) empty password field",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 403\", function(){\r",
+									"    pm.response.to.have.status(403);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"isMasterCard\": true,\r\n\t\"username\": \"magnifico581519@gmail.com\",\r\n\t\"password\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/login/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) no password field",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 403\", function(){\r",
+									"    pm.response.to.have.status(403);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"isMasterCard\": true,\r\n\t\"username\": \"magnifico581519@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/login/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) correct username, incorrect password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 403\", function(){\r",
+									"    pm.response.to.have.status(403);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"isMasterCard\": true,\r\n\t\"username\": \"magnifico581519@gmail.com\",\r\n\t\"password\": \"Steven\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/login/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) incorrect username, correct password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 403\", function(){\r",
+									"    pm.response.to.have.status(403);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"isMasterCard\": true,\r\n\t\"username\": \"magnifico@gmail.com\",\r\n\t\"password\": \"Steven1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/login/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) without the \"isMasterCard\" field",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"username\": \"magnifico581519@gmail.com\",\r\n\t\"password\": \"Steven1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/login/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) \"isMasterCard\" wrong value format (int)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 400\", function(){\r",
+									"    pm.response.to.have.status(400);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"isMasterCard\": 123,\r\n\t\"username\": \"magnifico581519@gmail.com\",\r\n\t\"password\": \"Steven1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/login/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) \"isMasterCard\" wrong value format (string)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 400\", function(){\r",
+									"    pm.response.to.have.status(400);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"isMasterCard\": \"123\",\r\n\t\"username\": \"magnifico581519@gmail.com\",\r\n\t\"password\": \"Steven1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/login/197/poq_user_id"
+					},
+					"response": []
+				},
+				{
+					"name": "(-) \"isMasterCard\" wrong value format (null)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 400\", function(){\r",
+									"    pm.response.to.have.status(400);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "platform.poq.io",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-country-identifier",
+								"value": "GB",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-id",
+								"value": "197",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "poq-app-identifier",
+								"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+								"type": "text"
+							},
+							{
+								"key": "poq-currency-identifier",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "version-code",
+								"value": "23.01",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-GB,en;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "iphone",
+								"type": "text"
+							},
+							{
+								"key": "poq-user-id",
+								"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+								"type": "text"
+							},
+							{
+								"key": "currency-code",
+								"value": "GBP",
+								"type": "text"
+							},
+							{
+								"key": "appuseragent",
+								"value": "Poq-Native-iOS-App",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"isMasterCard\": null,\r\n\t\"username\": \"magnifico581519@gmail.com\",\r\n\t\"password\": \"Steven1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://platform.poq.io/clients/cotton-traders/account/login/197/poq_user_id"
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Response must have a body, in JSON\", function(){",
+							"  pm.response.to.be.withBody;",
+							"  pm.response.to.be.json;",
+							"})",
+							"pm.test(\"The response time should be below 2s\",function(){",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000)",
+							"})",
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Account Details",
+			"item": [],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Response must have a body, in JSON\", function(){",
+							"  pm.response.to.be.withBody;",
+							"  pm.response.to.be.json;",
+							"})",
+							"pm.test(\"The response time should be below 2s\",function(){",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000)",
+							"})",
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "{{authorization_password}}",
+						"username": "{{authorization_username}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Host",
+						"value": "platform.poq.io",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "__cf_bm=W0jHtkuwwfBkerm0dT6kH_9Of_1JWRmkhv1hS6.mBuE-1690048247-0-AbZ2WALlH4lRbiegh/i4T/tATIItdHdQ7bPqTblKGwpA+DrzexsSZa9nGR0g+Bwb454UrYEKfgDpIBVvUZzxc6E=",
+						"type": "text"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "poq-country-identifier",
+						"value": "GB",
+						"type": "text"
+					},
+					{
+						"key": "poq-app-id",
+						"value": "197",
+						"type": "text"
+					},
+					{
+						"key": "accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "poq-app-identifier",
+						"value": "f9ae05f4-ca41-4b39-866b-e68be239d810",
+						"type": "text"
+					},
+					{
+						"key": "poq-currency-identifier",
+						"value": "GBP",
+						"type": "text"
+					},
+					{
+						"key": "version-code",
+						"value": "23.01",
+						"type": "text"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-GB,en;q=0.9",
+						"type": "text"
+					},
+					{
+						"key": "platform",
+						"value": "iphone",
+						"type": "text"
+					},
+					{
+						"key": "poq-user-id",
+						"value": "1CB10F0F-6FAF-4E13-8CC6-76EECBF42096",
+						"type": "text"
+					},
+					{
+						"key": "user-agent",
+						"value": "iOS/16.5.1 poq.ios/18.1.1 com.cottontradersltd.cottontraders/23.1.1",
+						"type": "text"
+					},
+					{
+						"key": "currency-code",
+						"value": "GBP",
+						"type": "text"
+					},
+					{
+						"key": "appuseragent",
+						"value": "Poq-Native-iOS-App",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "https://platform.poq.io/clients/cotton-traders/account/details/197/poq_user_id"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
